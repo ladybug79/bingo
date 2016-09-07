@@ -4,6 +4,7 @@ var _ = require("underscore");
 var fileServer = new static.Server('./public');
  
 require('http').createServer(function (request, response) {
+  console.log('Creating server');
   request.addListener('end', function () {
     console.log(request.url);
     if(request.url == '/bingo') {
