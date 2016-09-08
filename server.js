@@ -14,7 +14,7 @@ require('http').createServer(function (request, response) {
       fileServer.serve(request, response);
     }
   }).resume();
-}).listen(8080);
+}).listen(8080, "0.0.0.0");
 
 function printBingo(response) {
   response.writeHead(200, {"Content-Type": "text/html"});  
